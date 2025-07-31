@@ -1,16 +1,21 @@
 {
-  "name": "class-12",
+  "name": "irfan-loan-portal-backend",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "src/app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node src/app.js",
-    "dev": "nodemon src/app.js"
+    "dev": "nodemon src/app.js",
+    "build": "echo 'No build step required for Node.js'"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["loan", "portal", "backend", "api"],
+  "author": "Irfan",
   "license": "ISC",
-  "description": "",
+  "description": "Backend API for Loan Application Portal",
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=8.0.0"
+  },
   "dependencies": {
     "bcrypt": "^6.0.0",
     "cookie-parser": "^1.4.7",
@@ -20,8 +25,10 @@
     "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.16.4",
     "nodemailer": "^6.10.1",
-    "nodemon": "^3.1.10",
     "stripe": "^14.21.0",
     "validator": "^13.15.15"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
   }
 }
