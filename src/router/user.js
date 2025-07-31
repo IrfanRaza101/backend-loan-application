@@ -310,6 +310,34 @@ userRouter.patch('/notifications/read-all', protect, async (req, res) => {
     }
 });
 
+// Delete notification
+userRouter.delete('/notifications/:id', protect, async (req, res) => {
+    try {
+        const notification = await Notification.findOneAndDelete({
+            _id: req.params.id,
+            userId: req.user._id
+        });
+
+        if (!notification) {
+            return res.status(404).json({
+                success: false,
+                error: 'Notification not found'
+            });
+        }
+
+        res.json({
+            success: true,
+            message: 'Notification deleted successfully'
+        });
+    } catch (error) {
+        console.error('Delete notification error:', error);
+        res.status(500).json({
+            success: false,
+            error: 'Failed to delete notification'
+        });
+    }
+});
+
 // Get user loan installments
 userRouter.get('/installments', protect, async (req, res) => {
     try {
