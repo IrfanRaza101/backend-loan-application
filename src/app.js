@@ -23,7 +23,8 @@ app.use(cors({
         'http://localhost:8080', 
         'http://localhost:8081',
         'http://localhost:8082',
-        'https://your-frontend-domain.vercel.app', // Add your frontend Vercel URL here
+        'https://frontend-loan-application.vercel.app', // Your actual frontend Vercel URL
+        'https://loan-portal-frontend.vercel.app', // Alternative frontend URL
         /\.vercel\.app$/ // Allow all Vercel domains
     ],
     credentials: true, // Allow cookies to be sent with requests
